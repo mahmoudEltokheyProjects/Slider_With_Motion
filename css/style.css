@@ -1,0 +1,101 @@
+*
+{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #eee;
+}
+/* ++++++++++++++++++++++++++++++++++++ Slider Section ++++++++++++++++++++++++++++++++++++  */
+.container
+{
+    position: relative;
+    display: block;
+    /* slide بتاع كل width يساوي ال container بتاع ال width عشان ال */
+    width: 60% ;
+    height: 400px ;
+    overflow: hidden;
+    margin: 100px auto ;
+    /* border: 5px solid #ff0 ;   */
+}
+/* ------------------ Container of Slider ------------------  */
+.container .slides
+{
+    /* to move "Arrows" According to "carousel" */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%  ;
+    height: 100% ;
+    border-radius: 3px ;
+    background-color: #fff ;
+    /* border: 5px solid #f0f ;   */
+}
+/* ------------------ Slides of Slider ------------------  */
+.container .slides  .slide
+{
+    position: relative;
+    min-width: 100% ;
+    /* border: 5px solid #00f ;  */
+}
+/* ------------------  "image" of slide of Slider ------------------  */
+.container .slides  .slide  img
+{
+    width: 100%; 
+    height: 100% ;
+}
+/* ------------------ Slide info ------------------  */
+.container .slides  .slide  .slide-content
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px ;
+    color: #fff;
+}
+/* ------------------ slider controls ------------------  */
+.container  .slide-controls
+{
+    position: absolute;
+    left: 0 ;
+    top: 50% ;
+    transform: translateY(-50%);
+    width: 100% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+    /* border: 5px solid #0ff ;  */
+}
+/* -------------- Slider arrows : prev , next Arrow -------------- */
+.container .slide-controls #prev-btn ,
+.container .slide-controls #next-btn
+{
+    position: absolute ;
+    top: 50% ;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 30px ;
+    border: none ;
+    padding: 0px ; 
+    color: #fff ;
+}
+.container .slide-controls #prev-btn:focus ,
+.container .slide-controls #next-btn:focus
+{
+    outline: none;
+}
+/* ++++ left arrow +++++ */
+.container .slide-controls  #prev-btn
+{
+    left: 0px ;
+}
+/* ++++ left arrow +++++ */
+.container  .slide-controls  #next-btn
+{
+    right: 0px ;
+}
